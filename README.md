@@ -75,4 +75,19 @@ composer require livewire/livewire
 composer require laravel/ui
 php artisan ui:auth
 
+php artisan make::controller Admin/DashboardController
+php artisan make:migration add_details_to_users_table
+php artisan migrate
+
+php artisan make:middleware AdminMiddleware
+
+php artisan make:migration create_categories_table
+php artisan migrate
+
+php artisan make:model Category
+php artisan make:controller Admin/CategoryController
+
+php artisan make:request CategoryFormRequest
+
+php artisan make:livewire Admin/Category/Index
 
